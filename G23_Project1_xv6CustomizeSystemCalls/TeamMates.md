@@ -2,14 +2,14 @@
 
 Welcome to Project 1. We are modifying the MIT xv6 operating system kernel to add at least 5 new custom system calls. 
 
-To avoid Git conflicts with other work, **our official team codebase is on the `dinesh-dev` branch, NOT `main`.**
+To avoid Git conflicts with other work, **our official team codebase is on the `main`.**
 
 ## 📥 Step 1: How to get the code
 Do not just run a standard `git clone`. You must pull our specific branch. Run this in your terminal:
 
 ```bash
-# Clone ONLY the dinesh-dev branch
-git clone -b dinesh-dev <PASTE_OUR_GITHUB_REPO_URL_HERE>
+# Clone ONLY the main branch
+git clone <PASTE_OUR_GITHUB_REPO_URL_HERE>
 
 # Go into the folder
 cd xv6-riscv

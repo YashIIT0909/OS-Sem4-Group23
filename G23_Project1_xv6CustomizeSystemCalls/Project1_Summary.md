@@ -20,5 +20,5 @@ Operating Systems are not magic; they are massive C programs. The goal of this p
 
 ## ✅ Deliverables Checklist
 - [ ] Push modified xv6 source code to the `G23_Project1_xv6CustomizeSystemCalls` subfolder
-- [ ] Write proper documentation detailing the work done on the 5 system calls
+- [ ] Write proper documentation detailing the work done on the 7 system calls
 - [ ] Include screenshots of the user program executing the custom system calls in the documentation file
