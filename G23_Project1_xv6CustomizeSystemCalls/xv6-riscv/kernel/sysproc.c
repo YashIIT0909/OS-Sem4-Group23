@@ -107,3 +107,10 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+// This sends a specific hardware signal to the QEMU motherboard to shut down.
+uint64
+sys_halt(void)
+{
+  *(volatile uint32 *)0x100000 = 0x5555;
+  return 0;
+}
