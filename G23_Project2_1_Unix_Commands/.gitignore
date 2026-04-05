@@ -1,0 +1,23 @@
+# --- Compiled Executables ---
+shell
+custom_cat
+custom_ls
+custom_grep
+custom_wc
+custom_cp
+custom_mv
+custom_rm
+
+# --- Object Files ---
+*.o
+
+# --- Temporary Test Files ---
+test.txt
+*.log
+*.tmp
+
+# --- IDE & OS Junk ---
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
