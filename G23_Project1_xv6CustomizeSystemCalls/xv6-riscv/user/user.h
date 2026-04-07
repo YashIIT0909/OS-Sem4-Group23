@@ -26,6 +26,8 @@ int pause(int);
 int uptime(void);
 int getreadcount(void);
 int halt(void);
+int getprocinfo(int);
+int ps(void);
 
 // ulib.c
 int stat(const char*, struct stat*);

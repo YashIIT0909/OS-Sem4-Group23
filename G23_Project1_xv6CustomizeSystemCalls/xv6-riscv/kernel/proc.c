@@ -688,3 +688,35 @@ procdump(void)
     printf("\n");
   }
 }
+
+int
+getprocinfo(int pid)
+{
+  struct proc *p;
+  for(p = proc; p < &proc[NPROC]; p++){
+    acquire(&p->lock);
+    if(p->state != UNUSED && p->pid == pid){
+      printf("PID: %d | Name: %s | State: %d | Size: %d bytes\n", p->pid, p->name, p->state, (int)p->sz);
+      release(&p->lock);
+      return 0;
+    }
+    release(&p->lock);
+  }
+  printf("Process with PID %d not found\n", pid);
+  return -1;
+}
+
+int
+ps(void)
+{
+  struct proc *p;
+  printf("PID\tState\tName\tSize\n");
+  for(p = proc; p < &proc[NPROC]; p++){
+    acquire(&p->lock);
+    if(p->state != UNUSED){
+      printf("%d\t%d\t%s\t%d\n", p->pid, p->state, p->name, (int)p->sz);
+    }
+    release(&p->lock);
+  }
+  return 0;
+}

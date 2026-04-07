@@ -114,3 +114,17 @@ sys_halt(void)
   *(volatile uint32 *)0x100000 = 0x5555;
   return 0;
 }
+
+uint64
+sys_getprocinfo(void)
+{
+  int pid;
+  argint(0, &pid);
+  return getprocinfo(pid);
+}
+
+uint64
+sys_ps(void)
+{
+  return ps();
+}

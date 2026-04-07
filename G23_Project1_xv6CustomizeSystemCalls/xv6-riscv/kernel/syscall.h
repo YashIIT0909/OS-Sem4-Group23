@@ -22,3 +22,5 @@
 #define SYS_close  21
 #define SYS_getreadcount 22
 #define SYS_halt 23
+#define SYS_getprocinfo 24
+#define SYS_ps 25
